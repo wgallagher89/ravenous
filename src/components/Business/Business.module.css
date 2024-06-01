@@ -1,0 +1,25 @@
+img {
+    height: auto;
+    width: 400px;
+}
+
+.business {
+    display: grid;
+    border: 1px solid black;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.addressBlock {
+    border: 1px solid white;
+    line-height: 0.50px;
+    background-color: black;
+    color: white;
+}
+
+.reviewBlock {
+    border: 1px solid white;
+    line-height: 0.50px;
+    background-color: black;
+    color: white;
+}

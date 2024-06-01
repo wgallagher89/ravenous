@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .App-logo {
@@ -35,4 +39,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.header {
+  background-color: darkgoldenrod;
+  color: white;
+  width: 100%;
+  padding: 30px 0;
+  margin: 0;
+}
+
+.businessList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+  margin: 0 80px;
+  padding: 0 50px;
 }
