@@ -13,18 +13,21 @@
     margin-bottom: 30px;
 }
 
-.sortArea button {
+.sortArea li {
+    display: inline;
     margin: 10px;
     padding: 10px;
     font-size: 24px;
+    width: 300px;
     border: none;
     border-radius: 10px;
     background-color: darkgoldenrod;
     color: white;
     font-weight: bold;
+    list-style: none;
 }
 
-.sortArea button:hover {
+.sortArea li:hover {
     cursor: pointer;
     border: 1px solid black;
     color: gold;

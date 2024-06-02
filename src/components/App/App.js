@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import '../App/App.css';
-import Business from '../Business/Business';
 import BusinessList from '../BusinessList/BusinessList';
 import SearchBar from '../SearchBar/SearchBar';
 
@@ -10,7 +9,7 @@ function App() {
       <h1 className="header">Ravenous</h1>
       <SearchBar />
       <div className="businessList">
-      <BusinessList />
+        <BusinessList />
       </div>
     </div>
   );
