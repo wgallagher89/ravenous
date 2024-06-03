@@ -8,6 +8,7 @@ img {
     border: 1px solid black;
     width: 400px;
     margin-bottom: 20px;
+    background-color: lightgrey;
 }
 
 .addressBlock {

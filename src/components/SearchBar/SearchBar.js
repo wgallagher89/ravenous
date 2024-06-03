@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../SearchBar/SearchBar.module.css';
 
 //curl --request GET \
@@ -13,33 +13,74 @@ const searchByOptions = {
 }
 
 function SearchBar() {
+    const [searchInput, setSearchInput] = useState('');
+    const [location, setLocation] = useState('');
+    const [sortOption, setSortOption] = useState({});
+
+    function getSearchByClass (searchByOption) {
+        if (sortOption === searchByOption) {
+            return styles.active;
+        }
+        return '';
+    };
+
+    function handleSortOptionChange(searchByOptionValue) {
+        setSortOption(searchByOptionValue);
+    };
+
+    function handleSearchInputUpdate(event) {
+        setSearchInput(event.target.value);
+    };
+
+    function handleLocationUpdate(event) {
+        setLocation(event.target.value);
+    };
+
+    function handleSubmitSearch(event) {
+        event.preventDefault();
+        alert(`Searching Yelp with ${searchInput}, ${location}, ${sortOption}`);
+    };
+
     const renderSearchOptions = () => {
         return Object.keys(searchByOptions).map((searchByOption) => {
             let searchByOptionValue = searchByOptions[searchByOption];
-            return <li key={searchByOptionValue}>{searchByOption}</li>;
+            return (
+                <li 
+                    className={getSearchByClass(searchByOptionValue)}
+                    onClick={() => {handleSortOptionChange(searchByOptionValue)}} 
+                    key={searchByOptionValue} 
+                >    
+                    {searchByOption}
+                </li>
+            );
         }); 
     };
+
     return (
-        <div className={styles.searchBar}>
+        <form onSubmit={handleSubmitSearch} className={styles.searchBar}>
             <div className={styles.sortArea}>
                 <ul>{renderSearchOptions()}</ul>
             </div>
             <div className={styles.inputArea}>
                 <input 
                     name="searchBusinesses"
+                    value={searchInput}
                     placeholder="Search Businesses"
                     type="text"
+                    onChange={handleSearchInputUpdate}
                 />
                 <input 
                     name="where"
+                    value={location}
                     placeholder="Where?"
                     type="text"
+                    onChange={handleLocationUpdate}
                 />
             </div>
             <div>
                 <button className={styles.searchButton} type="submit">Find Your Spot</button>
             </div>
-        </div>
+        </form>
     )
 };
 
