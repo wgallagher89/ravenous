@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Yelp from '../../utils/Yelp';
 import styles from '../SearchBar/SearchBar.module.css';
 
 //curl --request GET \
@@ -7,12 +8,12 @@ import styles from '../SearchBar/SearchBar.module.css';
 
 const baseUrl = 'https://api.yelp.com/v3/businesses/search'
 const searchByOptions = {
-    "Best Match": '?sort_by=best_match&limit=10',
-    "Rating": '?sort_by=rating&limit=10',
-    "Review Count": '?sort_by=review_count&limit=10'
+    "Best Match": 'best_match&limit=10',
+    "Rating": 'rating&limit=10',
+    "Review Count": 'review_count&limit=10'
 }
 
-function SearchBar() {
+function SearchBar({searchYelp}) {
     const [searchInput, setSearchInput] = useState('');
     const [location, setLocation] = useState('');
     const [sortOption, setSortOption] = useState({});
@@ -38,7 +39,7 @@ function SearchBar() {
 
     function handleSubmitSearch(event) {
         event.preventDefault();
-        alert(`Searching Yelp with ${searchInput}, ${location}, ${sortOption}`);
+        searchYelp(searchInput, location, sortOption);
     };
 
     const renderSearchOptions = () => {

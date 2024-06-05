@@ -1,10 +1,13 @@
 img {
-    height: auto;
-    width: 400px;
+    height: 350px;
+    width: auto;
+    overflow: hidden;
+    
 }
 
 .business {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     border: 1px solid black;
     width: 400px;
     margin-bottom: 20px;
