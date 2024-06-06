@@ -7,17 +7,6 @@ function BusinessList({ businesses }) {
         return <Business business={business} />;
     });
     return businessesMapped;
-
-    // return (
-    //     <div className={styles.businessList}>
-    //         <Business />
-    //         <Business />
-    //         <Business />
-    //         <Business />
-    //         <Business />
-    //         <Business />
-    //     </div>
-    // )
 };
 
 export default BusinessList;
