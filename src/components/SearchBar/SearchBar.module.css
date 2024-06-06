@@ -1,0 +1,64 @@
+
+
+.searchBar {
+    background-image: url("../../images/calum-lewis-vA1L1jRTM70-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.sortArea li {
+    display: inline;
+    margin: 10px;
+    padding: 10px;
+    font-size: 24px;
+    width: 300px;
+    border: none;
+    border-radius: 10px;
+    background-color: darkgoldenrod;
+    color: white;
+    font-weight: bold;
+    list-style: none;
+}
+
+.sortArea li:hover {
+    cursor: pointer;
+    border: 1px solid black;
+    color: gold;
+}
+
+.sortArea li.active,
+.sortArea li.active:hover {
+    cursor: pointer;
+    border: 1px solid black;
+    color: gold;
+}
+
+.inputArea input {
+    width: 400px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin: 10px 30px;
+}
+
+.searchButton {
+    padding: 10px 30px;
+    font-size: 18px;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+.searchButton:hover {
+    cursor: pointer;
+    border: 3px solid white;
+    color: dodgerblue;
+}

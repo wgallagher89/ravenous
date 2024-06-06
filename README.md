@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Ravenous
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project utilizes the Yelp API to return a list of 10 businesses based on a cuisine type and location. This project is not fully functioning and is mainly to reinforce utilizing React to interact with APIs.
 
-## Available Scripts
+## Technologies
 
-In the project directory, you can run:
++ HTML
++ CSS
++ JavaScript
++ React
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This program returns a list of 10 businesses based on 2 search inputs and 3 sort criteria. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+At the top of the search area are 3 sort options: Best Match, Rating, or Review Count. In combination with the 2 text input fields, one of these sort options are required in order to return results. 
 
-### `npm test`
+Directly below the sort options are 2 text input fields. The first is for the type of business desired (e.g. Italian cuisine). The second input is for the desired location specified by city. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Once all 3 inputs are completed and upon pressing the search button, a list of 10 unique businesses that closest match the criteria will be returned. This list will include an image selected by the business, the business name, the address, and the total review count. 
 
-### `npm run build`
+There is no further functionality as this project is mainly to exercise skills with React and API interaction. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Future Work
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Possible future features may include: 
+ 
++ Being taken directly to the business page upon clicking the business image.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
++ Integrating the Google Maps API to allow for business address viewing in Google Maps.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
++ Autocompletion of addresses in the location input field.

@@ -1,0 +1,29 @@
+img {
+    height: 350px;
+    width: auto;
+    overflow: hidden;
+    
+}
+
+.business {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 400px;
+    margin-bottom: 20px;
+    background-color: lightgrey;
+}
+
+.addressBlock {
+    border: 1px solid white;
+    line-height: 0.50px;
+    background-color: black;
+    color: white;
+}
+
+.reviewBlock {
+    border: 1px solid white;
+    line-height: 0.50px;
+    background-color: black;
+    color: white;
+}
